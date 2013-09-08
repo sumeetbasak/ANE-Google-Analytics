@@ -1,5 +1,17 @@
 ## HEAD
 
+### 3.0.0 (September 08, 2013) *in progress*
+* updated native library to v3
+* updated AIR support to 3.8
+* updated minimum ios version to 4.3
+* removed manual dispatching, deprecated in the native libraries
+* dryRun came back! implemented again
+* optOut flag is now synchronous in Android like in iOS, no more UI freezes when reading it
+* removed the debug flag and introduced the logLevel property, following the native libraries changes
+* removed automatic session handling
+* ...
+* bug fixes and more
+
 ### 0.2.04 (February 02, 2013)
 
 * Updated native tracker to version 2.0b4
