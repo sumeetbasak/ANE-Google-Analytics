@@ -10,12 +10,15 @@
  */
 package eu.alebianco.air.extensions.analytics.api {
 
+import eu.alebianco.air.extensions.analytics.LogLevel;
 import eu.alebianco.core.IDisposable;
 
 public interface IAnalytics extends IDisposable {
 
 	function get version():String;
 
+	function get logLevel():LogLevel;
+	function set logLevel(value:LogLevel):void;
 
 	function get optOut():Boolean;
 	function set optOut(value:Boolean):void;

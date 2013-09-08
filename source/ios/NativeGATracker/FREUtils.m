@@ -10,41 +10,42 @@
  */
 
 #import "FREUtils.h"
-#import "FREConversionUtil.h"
 
 @implementation FREUtils
 
-void logEvent(FREContext ctx, enum LogLevel lvl, NSString *format, ...) {
+void logEvent(FREContext ctx, enum LogLevel level, NSString *format, ...) {
     va_list ap = NULL;
     va_start(ap, format);
     NSString *message = [[[NSString alloc] initWithFormat:format arguments:ap] autorelease];
     va_end(ap);
 
-    NSString *level = NULL;
-    switch (lvl) {
+    NSString *tag = NULL;
+    switch (level) {
+        case kVerbose:
+            tag = @"VERBOSE";
+            break;
         case kInfo:
-            level = @"INFO";
+            tag = @"INFO";
             break;
         case kDebug:
-            level = @"DEBUG";
+            tag = @"DEBUG";
             break;
-        case kWarn:
-            level = @"WARN";
+        case kWarning:
+            tag = @"WARNING";
             break;
         case kError:
-            level = @"ERROR";
+            tag = @"ERROR";
             break;
         case kFatal:
-            level = @"FATAL";
+            tag = @"FATAL";
             break;
-
         default:
-            level = @"INFO";
+            tag = @"INFO";
             break;
     }
 
-    NSLog(@"%@: %@", level, message);
-    DISPATCH_EVENT(ctx, (uint8_t *) [[@"INTERNAL_" stringByAppendingString:level] UTF8String], (uint8_t *) [message UTF8String]);
+    NSLog(@"%@: %@", tag, message);
+    DISPATCH_EVENT(ctx, (uint8_t *) [[@"INTERNAL_" stringByAppendingString:tag] UTF8String], (uint8_t *) [message UTF8String]);
 }
 FREObject createRuntimeException(NSString *type, NSInteger id, NSString *format, ...) {
     FREObject object;

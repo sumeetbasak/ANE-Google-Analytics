@@ -14,9 +14,10 @@ import android.util.Log;
 
 public enum LogLevel {
 	
+	VERBOSE("VERBOSE", Log.VERBOSE),
 	INFO("INFO", Log.INFO),
 	DEBUG("DEBUG", Log.DEBUG),
-	WARN("WARN", Log.WARN),
+    WARNING("WARNING", Log.WARN),
 	ERROR("ERROR", Log.ERROR),
 	FATAL("FATAL", Log.ERROR);
 	

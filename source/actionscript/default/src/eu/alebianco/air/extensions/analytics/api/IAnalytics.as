@@ -10,6 +10,7 @@
  */
 package eu.alebianco.air.extensions.analytics.api {
 
+import eu.alebianco.air.extensions.analytics.LogLevel;
 import eu.alebianco.core.IDisposable;
 
 /**
@@ -20,6 +21,18 @@ public interface IAnalytics extends IDisposable {
 	 * Current version of the extension.
 	 */
 	function get version():String;
+	/**
+	 * Defines the log level on the device.
+	 * <p>It is up to the implementation how the log level is used, but log messages outside the set log level
+	 * should not be output.</p>
+	 * @see eu.alebianco.air.extensions.analytics.LogLevel
+	 * @default LogLevel.WARNING
+	 */
+	function get logLevel():LogLevel;
+	/**
+	 * @private
+	 */
+	function set logLevel(value:LogLevel):void;
 	/**
 	 * Sets or resets the application-level opt out flag.
 	 * <p>If set, no hits will be sent to Google Analytics. The value of this flag will persist across app starts.</p>

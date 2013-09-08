@@ -11,15 +11,18 @@
 
 #import <Foundation/Foundation.h>
 #import "FlashRuntimeExtensions.h"
+#import "FREConversionUtil.h"
+#import "GAILogger.h"
 
 #define DISPATCH_EVENT(extensionContext, type, message) FREDispatchStatusEventAsync((extensionContext), (uint8_t*)(type), (uint8_t*)(message))
 
 @interface FREUtils : NSObject
 
 enum LogLevel {
-    kInfo = 0,
+    kVerbose = 0,
+    kInfo,
     kDebug,
-    kWarn,
+    kWarning,
     kError,
     kFatal
 };

@@ -74,6 +74,17 @@ public final class Analytics implements IAnalytics {
 	/**
 	 * @inheritDoc
 	 */
+	public function get logLevel():LogLevel {
+		return LogLevel.WARNING;
+	}
+	/**
+	 * @private
+	 */
+	public function set logLevel(value:LogLevel):void {
+	}
+	/**
+	 * @inheritDoc
+	 */
 	public function get optOut():Boolean {
 		return false;
 	}

@@ -17,9 +17,10 @@ public class LogLevel extends Enum {
 		initEnum(LogLevel);
 	}
 
+	public static const VERBOSE:LogLevel = new LogLevel(logStatusLevel);
 	public static const INFO:LogLevel = new LogLevel(logStatusLevel);
 	public static const DEBUG:LogLevel = new LogLevel(logStatusLevel);
-	public static const WARN:LogLevel = new LogLevel(logStatusLevel);
+	public static const WARNING:LogLevel = new LogLevel(logStatusLevel);
 	public static const ERROR:LogLevel = new LogLevel(logStatusLevel);
 	public static const FATAL:LogLevel = new LogLevel(logStatusLevel);
 

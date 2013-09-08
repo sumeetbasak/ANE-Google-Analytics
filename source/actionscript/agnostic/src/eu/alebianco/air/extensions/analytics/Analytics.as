@@ -69,6 +69,16 @@ public final class Analytics implements IAnalytics {
 		return handleResultFromExtension(context.call("getVersion"), String);
 	}
 
+	public function get logLevel():LogLevel {
+		const name:String = handleResultFromExtension(context.call("getLogLevel"), String) as String;
+		return LogLevel.parseConstant(name.toUpperCase(), true);
+	}
+
+	public function set logLevel(value:LogLevel):void {
+		const name:String = value.name.toUpperCase();
+		handleResultFromExtension(context.call("setLogLevel", name));
+	}
+
 	public function get optOut():Boolean {
 		return handleResultFromExtension(context.call("getOptOut"), Boolean) as Boolean;
 	}

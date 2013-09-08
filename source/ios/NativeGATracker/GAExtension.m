@@ -22,6 +22,8 @@ void GAContextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx,
             MAP_FUNCTION( getOptOut, NULL ),
             MAP_FUNCTION( setDryRun, NULL ),
             MAP_FUNCTION( getDryRun, NULL ),
+            MAP_FUNCTION( setLogLevel, NULL ),
+            MAP_FUNCTION( getLogLevel, NULL ),
 
             MAP_FUNCTION( setAppName, NULL ),
             MAP_FUNCTION( setAppVersion, NULL ),
