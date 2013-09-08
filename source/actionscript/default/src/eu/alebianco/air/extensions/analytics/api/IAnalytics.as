@@ -41,33 +41,6 @@ public interface IAnalytics extends IDisposable {
 	 */
 	function set optOut(value:Boolean):void;
 	/**
-	 * Indicates whether or not manual dispatching is enabled.
-	 * <p>When enabled, the application will need to manually dispatch events with the dispatch() method.</p>
-	 * @see #dispatch()
-	 * @default false
-	 */
-	function get dispatchManually():Boolean;
-	/**
-	 * @private
-	 */
-	function set dispatchManually(value:Boolean):void;
-	/**
-	 * Indicates the interval of time, in seconds, between automatic dispatches of events.
-	 * <p>If zero, dispatching happens on every hit, if the device has internet connectivity.</p>
-	 * @default 120
-	 */
-	function get dispatchInterval():uint;
-	/**
-	 * @private
-	 */
-	function set dispatchInterval(seconds:uint):void;
-	/**
-	 * Dispatches queued hits (view, events, etc) to Google Analytics if a network connection is available.
-	 * <p>This has no effect on the dispatch interval and it can be used in conjunction with automatic dispatching to
-	 * force the dispatch at any point, like before exiting the application.</p>
-	 */
-	function dispatch():void;
-	/**
 	 * Returns a tracker for the specified Google Analytics account ID.
 	 * <p>When the tracker is created, some information about the current application (id, name and version) are
 	 * automatically set. They can be overridden before tracking any kind of data.</p>

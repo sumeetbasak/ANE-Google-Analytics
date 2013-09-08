@@ -109,28 +109,5 @@ DEFINE_ANE_FUNCTION(getOptOut) {
 
     return result;
 }
-DEFINE_ANE_FUNCTION(setDispatchInterval) {
-    FREObject result = NULL;
-
-    NSInteger interval;
-    @try {
-        interval = [FREConversionUtil toInt:argv[0]];
-    }
-    @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'interval' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'interval' parameter on method '%s'.", __FUNCTION__);
-    }
-
-    [[GAI sharedInstance] setDispatchInterval:interval];
-
-    return result;
-}
-DEFINE_ANE_FUNCTION(dispatch) {
-    FREObject result = NULL;
-
-    [[GAI sharedInstance] dispatch];
-
-    return result;
-}
 
 @end

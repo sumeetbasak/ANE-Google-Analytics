@@ -94,28 +94,6 @@ public final class Analytics implements IAnalytics {
 	public function set optOut(value:Boolean):void {
 	}
 	/**
-	 * @inheritDoc
-	 */
-	public function get dispatchManually():Boolean {
-		return false;
-	}
-	/**
-	 * @private
-	 */
-	public function set dispatchManually(value:Boolean):void {
-	}
-	/**
-	 * @inheritDoc
-	 */
-	public function get dispatchInterval():uint {
-		return 0;
-	}
-	/**
-	 * @private
-	 */
-	public function set dispatchInterval(seconds:uint):void {
-	}
-	/**
 	 * Dispose the extension and clear any object reference to ready it for garbage collection.
 	 * <p>All existing trackers are closed immediately and can't be used anymore.</p>
 	 * <p>Existing references to the class will be unusable.</p>
@@ -141,11 +119,6 @@ public final class Analytics implements IAnalytics {
 	 * @inheritDoc
 	 */
 	public function closeTracker(trackingId:String):void {
-	}
-	/**
-	 * @inheritDoc
-	 */
-	public function dispatch():void {
 	}
 }
 }

@@ -34,14 +34,10 @@ public final class Analytics implements IAnalytics {
 	private var context:ExtensionContext;
 	private var trackers:Dictionary;
 
-	private var _dispatchInterval:uint = 180;
-	private var _dispatchManually:Boolean = false;
-
 	public static function getInstance():Analytics {
 		if (!instance) {
 			canBuild = true;
 			instance = new Analytics();
-            instance.dispatchInterval = instance._dispatchInterval;
 			canBuild = false;
 		}
 		return instance;
@@ -60,7 +56,6 @@ public final class Analytics implements IAnalytics {
 
 		if (!context) {
 			context = ExtensionContext.createExtensionContext(EXTENSION_ID, null);
-			dispatchInterval = dispatchInterval;
 			context.addEventListener(StatusEvent.STATUS, statusHandler);
 		}
 
@@ -88,24 +83,6 @@ public final class Analytics implements IAnalytics {
 
 	public function set optOut(value:Boolean):void {
 		handleResultFromExtension(context.call("setOptOut", value));
-	}
-
-	public function get dispatchManually():Boolean {
-		return _dispatchManually;
-	}
-
-	public function set dispatchManually(value:Boolean):void {
-		_dispatchManually = value;
-		handleResultFromExtension(context.call("setDispatchInterval", _dispatchManually ? -1 : _dispatchInterval));
-	}
-
-	public function get dispatchInterval():uint {
-		return _dispatchInterval;
-	}
-
-	public function set dispatchInterval(seconds:uint):void {
-		_dispatchInterval = seconds;
-		handleResultFromExtension(context.call("setDispatchInterval", _dispatchManually ? -1 : _dispatchInterval));
 	}
 
 	public function hasTracker(trackingId:String):Boolean {
@@ -140,10 +117,6 @@ public final class Analytics implements IAnalytics {
 			trackers[trackingId] = null;
 			delete trackers[trackingId];
 		}
-	}
-
-	public function dispatch():void {
-		handleResultFromExtension(context.call("dispatch"));
 	}
 
 	public function dispose():void {
