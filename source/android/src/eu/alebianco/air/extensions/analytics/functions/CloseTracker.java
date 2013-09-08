@@ -36,7 +36,7 @@ public class CloseTracker implements FREFunction {
         }
 
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
-        GoogleAnalytics.getInstance(context.getActivity()).closeTracker(tracker);
+        GoogleAnalytics.getInstance(context.getActivity()).closeTracker(tracker.getName());
 
         return result;
     }
