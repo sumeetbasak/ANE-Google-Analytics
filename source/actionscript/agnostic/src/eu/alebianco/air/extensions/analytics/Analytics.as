@@ -139,7 +139,7 @@ public final class Analytics implements IAnalytics {
 	}
 
 	private function statusHandler(event:StatusEvent):void {
-		var level:StatusLevel = StatusLevel.parseConstant(event.level);
+		var level:LogLevel = LogLevel.parseConstant(event.level);
 		if (level) {
 			var ns:Namespace = level.ns;
 			ns::processStatusEvent(level.name, event.code);
