@@ -13,6 +13,7 @@ package eu.alebianco.air.extensions.analytics.functions;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
+import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.Tracker;
 import com.stackoverflow.util.StackTraceInfo;
@@ -37,17 +38,17 @@ public class SetSecure implements FREFunction {
 
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
 
-        Boolean flag;
+        String value;
         try {
-            flag = args[1].getAsBool();
+            value = args[1].getAsString();
         } catch (Exception e) {
             FREUtils.logEvent(context, LogLevel.FATAL,
-                    "Unable to read the 'flag' parameter. [Exception:(type:%s, method:%s)].",
+                    "Unable to read the 'value' parameter. [Exception:(type:%s, method:%s)].",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
-            return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'flag' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
+            return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'value' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
-        tracker.setUseSecure(flag);
+        tracker.set(Fields.USE_SECURE, value);
 
         return result;
     }

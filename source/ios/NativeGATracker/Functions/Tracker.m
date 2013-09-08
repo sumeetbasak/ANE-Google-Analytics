@@ -43,7 +43,7 @@ DEFINE_ANE_FUNCTION(getAnonymous) {
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
     @try {
-        result = [FREConversionUtil fromBoolean:[tracker anonymize]];
+        result = [FREConversionUtil fromString:[tracker get:kGAIAnonymizeIp]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to create the return value. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
@@ -66,16 +66,16 @@ DEFINE_ANE_FUNCTION(setAnonymous) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    BOOL flag;
+    NSString *value;
     @try {
-        flag = [FREConversionUtil toBoolean:argv[1]];
+        value = [FREConversionUtil toString:argv[1]];
     }
     @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'flag' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'flag' parameter on method '%s'.", __FUNCTION__);
+        logEvent(context, kFatal, @"Unable to read the 'value' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setAnonymize:flag];
+    [tracker set:kGAIAnonymizeIp value:value];
 
     return result;
 }
@@ -94,7 +94,7 @@ DEFINE_ANE_FUNCTION(getSecure) {
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
     @try {
-        result = [FREConversionUtil fromBoolean:[tracker useHttps]];
+        result = [FREConversionUtil fromBoolean:[tracker get:kGAIUseSecure]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to create the return value. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
@@ -117,16 +117,16 @@ DEFINE_ANE_FUNCTION(setSecure) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    BOOL flag;
+    NSString *value;
     @try {
-        flag = [FREConversionUtil toBoolean:argv[1]];
+        value = [FREConversionUtil toString:argv[1]];
     }
     @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'flag' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'flag' parameter on method '%s'.", __FUNCTION__);
+        logEvent(context, kFatal, @"Unable to read the 'value' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setUseHttps:flag];
+    [tracker set:kGAIUseSecure value:value];
 
     return result;
 }
@@ -145,7 +145,7 @@ DEFINE_ANE_FUNCTION(getSampleRate) {
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
     @try {
-        result = [FREConversionUtil fromNumber:[NSNumber numberWithDouble:[tracker sampleRate]]];
+        result = [FREConversionUtil fromString:[tracker get:kGAISampleRate]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to create the return value. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
@@ -168,16 +168,16 @@ DEFINE_ANE_FUNCTION(setSampleRate) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    NSNumber *rate;
+    NSString *rate;
     @try {
-        rate = [FREConversionUtil toNumber:argv[1]];
+        rate = [FREConversionUtil toString:argv[1]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to read the 'rate' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'rate' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setSampleRate:[rate doubleValue]];
+    [tracker set:kGAISampleRate value:rate];
 
     return result;
 }

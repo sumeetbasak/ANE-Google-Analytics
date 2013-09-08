@@ -28,14 +28,14 @@ public interface ITracker extends IDisposable {
 	function get clientID():String;
 	function set clientID(value:String);
 
-	function get sampleRate():Number;
-	function set sampleRate(value:Number):void;
-
 	function get secure():Boolean;
 	function set secure(value:Boolean):void;
 
 	function get anonymous():Boolean;
 	function set anonymous(value:Boolean):void;
+
+	function get sampleRate():Number;
+	function set sampleRate(value:Number):void;
 
 	function startNewSession():void;
 

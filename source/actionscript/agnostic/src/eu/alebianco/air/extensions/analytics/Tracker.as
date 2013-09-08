@@ -64,22 +64,28 @@ internal class Tracker implements ITracker {
 		handleResultFromExtension(context.call("setClientID", id, value));
 	}
 	public function get anonymous():Boolean {
-		return handleResultFromExtension(context.call("getAnonymous", id), Boolean) as Boolean;
+		const raw:String = handleResultFromExtension(context.call("getAnonymous", id), String) as String;
+		return raw == "true";
 	}
 	public function set anonymous(value:Boolean):void {
-		handleResultFromExtension(context.call("setAnonymous", id, value));
+		const normalized:String = value ? "true" : "false";
+		handleResultFromExtension(context.call("setAnonymous", id, normalized));
 	}
 	public function get secure():Boolean {
-		return handleResultFromExtension(context.call("getSecure", id), Boolean) as Boolean;
+		const raw:String = handleResultFromExtension(context.call("getSecure", id), String) as String;
+		return raw == "true";
 	}
 	public function set secure(value:Boolean):void {
-		handleResultFromExtension(context.call("setSecure", id, value));
+		const normalized:String = value ? "true" : "false";
+		handleResultFromExtension(context.call("setSecure", id, normalized));
 	}
 	public function get sampleRate():Number {
-		return handleResultFromExtension(context.call("getSampleRate", id), Number) as Number;
+		const raw:String = handleResultFromExtension(context.call("getSampleRate", id), String) as String;
+		return Number(raw);
 	}
 	public function set sampleRate(value:Number):void {
-		handleResultFromExtension(context.call("setSampleRate", id, Math.max(0, Math.min(100, value))));
+		const normalized:Number = Math.max(0, Math.min(100, value));
+		handleResultFromExtension(context.call("setSampleRate", id, normalized.toString()));
 	}
 	public function startNewSession():void {
 		handleResultFromExtension(context.call("setSessionControl", id, "start"));

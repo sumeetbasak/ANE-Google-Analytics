@@ -13,6 +13,7 @@ package eu.alebianco.air.extensions.analytics.functions;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
+import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.Tracker;
 import com.stackoverflow.util.StackTraceInfo;
@@ -38,7 +39,7 @@ public class GetSecure implements FREFunction {
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
 
         try {
-            result = FREObject.newObject(tracker.isUseSecure());
+            result = FREObject.newObject(tracker.get(Fields.USE_SECURE));
         } catch(Exception e) {
             FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to create the return value. [Exception:(type:%s, method:%s)].",

@@ -13,6 +13,7 @@ package eu.alebianco.air.extensions.analytics.functions;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
+import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.Tracker;
 import com.stackoverflow.util.StackTraceInfo;
@@ -37,9 +38,9 @@ public class SetSampleRate implements FREFunction {
 
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
 
-        Double rate;
+        String rate;
         try {
-            rate = args[1].getAsDouble();
+            rate = args[1].getAsString();
         } catch (Exception e) {
             FREUtils.logEvent(context, LogLevel.FATAL,
                     "Unable to read the 'rate' parameter. [Exception:(type:%s, method:%s)].",
@@ -47,7 +48,7 @@ public class SetSampleRate implements FREFunction {
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'rate' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
-        tracker.setSampleRate(rate);
+        tracker.set(Fields.SAMPLE_RATE, rate);
 
         return result;
     }
