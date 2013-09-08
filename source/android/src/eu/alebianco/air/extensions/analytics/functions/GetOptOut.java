@@ -18,39 +18,16 @@ import com.stackoverflow.util.StackTraceInfo;
 import eu.alebianco.air.extensions.utils.FREUtils;
 import eu.alebianco.air.extensions.utils.LogLevel;
 
-import java.util.HashMap;
-
 public class GetOptOut implements FREFunction {
-
-    private final HashMap<String, Boolean> mutex = new HashMap<String, Boolean>();
 
     @Override
     public FREObject call(FREContext context, FREObject[] args) {
         FREObject result;
 
-        GoogleAnalytics.getInstance(context.getActivity()).requestAppOptOut(new GoogleAnalytics.AppOptOutCallback() {
-            @Override
-            public void reportAppOptOut(boolean value) {
-                synchronized (mutex) {
-                    mutex.put("done", true);
-                    mutex.put("result", value);
-                    mutex.notifyAll();
-                }
-            }
-        });
-
-        synchronized (mutex) {
-             while (!mutex.containsKey("done") || !mutex.get("done")) {
-                try {
-                    mutex.wait();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-             }
-        }
+        Boolean flag = GoogleAnalytics.getInstance(context.getActivity()).getAppOptOut();
 
         try {
-            result = FREObject.newObject(mutex.get("result"));
+            result = FREObject.newObject(flag);
         } catch(Exception e) {
             FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to create the return value. [Exception:(type:%s, method:%s)].",
