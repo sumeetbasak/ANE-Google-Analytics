@@ -28,10 +28,6 @@ internal class Tracker implements ITracker {
 
 	private var id:String;
 
-	private var _appName:String;
-	private var _appVersion:String;
-	private var _lockAppData:Boolean = false;
-
 	private var _sessionStarted:Boolean = false;
 
 	public function Tracker(id:String, context:ExtensionContext) {
@@ -40,22 +36,6 @@ internal class Tracker implements ITracker {
 		parseAppDescriptor();
 	}
 
-	public function get appName():String {
-		return _appName;
-	}
-	public function set appName(value:String):void {
-		if (_lockAppData) return;
-		_appName = value;
-		handleResultFromExtension(context.call("setAppName", id, _appName));
-	}
-	public function get appVersion():String {
-		return _appVersion;
-	}
-	public function set appVersion(value:String):void {
-		if (_lockAppData) return;
-		_appVersion = value;
-		handleResultFromExtension(context.call("setAppVersion", id, _appVersion));
-	}
 	public function get trackingID():String {
 		return id;
 	}
@@ -64,6 +44,24 @@ internal class Tracker implements ITracker {
 	}
 	public function set appID(value:String):void {
 		handleResultFromExtension(context.call("setAppID", id, value));
+	}
+	public function get appName():String {
+		return handleResultFromExtension(context.call("getAppName", id), String) as String;
+	}
+	public function set appName(value:String):void {
+		handleResultFromExtension(context.call("setAppName", id, value));
+	}
+	public function get appVersion():String {
+		return handleResultFromExtension(context.call("getAppVersion", id), String) as String;
+	}
+	public function set appVersion(value:String):void {
+		handleResultFromExtension(context.call("setAppVersion", id, value));
+	}
+	public function get clientID():String {
+		return handleResultFromExtension(context.call("getClientID", id), String) as String;
+	}
+	public function set clientID(value:String) {
+		handleResultFromExtension(context.call("setClientID", id, value));
 	}
 	public function get anonymous():Boolean {
 		return handleResultFromExtension(context.call("getAnonymous", id), Boolean) as Boolean;
@@ -112,7 +110,6 @@ internal class Tracker implements ITracker {
 		handleResultFromExtension(context.call("clearCustomDimension", id, index));
 	}
 	public function send(data:Hit):void {
-		_lockAppData = true;
 		handleResultFromExtension(context.call("trackData", id, data.type.name, data));
 		if (_sessionStarted) {
 			handleResultFromExtension(context.call("setSessionControl", id, null));
@@ -141,6 +138,7 @@ internal class Tracker implements ITracker {
 		handleResultFromExtension(context.call("closeTracker", id));
 		context = null;
 	}
+
 	private function parseAppDescriptor():void {
 		const descriptor:XML = NativeApplication.nativeApplication.applicationDescriptor;
 		const ns:Namespace = descriptor.namespace();

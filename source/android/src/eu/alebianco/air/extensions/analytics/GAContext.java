@@ -50,10 +50,14 @@ public class GAContext extends FREContext {
 
         // Tracker
 
-        functions.put("setAppName", new SetAppName());
-        functions.put("setAppVersion", new SetAppVersion());
         functions.put("getAppID", new GetAppID());
         functions.put("setAppID", new SetAppID());
+        functions.put("setAppName", new SetAppName());
+        functions.put("getAppName", new GetAppName());
+        functions.put("setAppVersion", new SetAppVersion());
+        functions.put("getAppVersion", new GetAppVersion());
+        functions.put("getClientID", new GetClientID());
+        functions.put("setClientID", new SetClientID());
         functions.put("getAnonymous", new GetAnonymous());
         functions.put("setAnonymous", new SetAnonymous());
         functions.put("getSecure", new GetSecure());

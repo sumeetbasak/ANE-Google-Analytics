@@ -21,7 +21,7 @@ import com.stackoverflow.util.StackTraceInfo;
 import eu.alebianco.air.extensions.utils.FREUtils;
 import eu.alebianco.air.extensions.utils.LogLevel;
 
-public class SetAppVersion implements FREFunction {
+public class SetClientID implements FREFunction {
 
     @Override
     public FREObject call(FREContext context, FREObject[] args) {
@@ -50,7 +50,7 @@ public class SetAppVersion implements FREFunction {
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'version' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
-        tracker.set(Fields.APP_VERSION, version);
+        tracker.set(Fields.CLIENT_ID, version);
 
         return result;
     }

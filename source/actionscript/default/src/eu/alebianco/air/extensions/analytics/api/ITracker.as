@@ -19,11 +19,14 @@ public interface ITracker extends IDisposable {
 	function get appID():String;
 	function set appID(value:String):void;
 
-	function set appName(value:String):void;
 	function get appName():String;
+	function set appName(value:String):void;
 
-	function set appVersion(value:String):void;
 	function get appVersion():String;
+	function set appVersion(value:String):void;
+
+	function get clientID():String;
+	function set clientID(value:String);
 
 	function get sampleRate():Number;
 	function set sampleRate(value:Number):void;

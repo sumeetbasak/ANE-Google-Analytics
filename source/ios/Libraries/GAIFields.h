@@ -34,7 +34,7 @@ extern NSString *const kGAIDescription;  // synonym for kGAIScreenName
 extern NSString *const kGAIScreenName;   // synonym for kGAIDescription
 extern NSString *const kGAITitle;
 extern NSString *const kGAIAppName;
-extern NSString *const kGAIAppVersion;
+extern NSString *const kGAIClientIdkGAIAppVersion;
 extern NSString *const kGAIAppId;
 extern NSString *const kGAIAppInstallerId;
 
