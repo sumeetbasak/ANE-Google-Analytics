@@ -15,15 +15,16 @@
 		6F808E18168CBA4300CEDFF5 /* FREConversionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808DFB168CB8A300CEDFF5 /* FREConversionUtil.m */; };
 		6F808E19168CBA4300CEDFF5 /* FREUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808DFD168CB8A300CEDFF5 /* FREUtils.m */; };
 		6F808E1A168CBA4300CEDFF5 /* GAExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E0A168CB8A300CEDFF5 /* GAExtension.m */; };
-		6F808E28168CBA6300CEDFF5 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F808E21168CBA6300CEDFF5 /* libGoogleAnalytics.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		6F808E2B168CBAF000CEDFF5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F808E2A168CBAF000CEDFF5 /* CoreData.framework */; };
-		6F808E2D168CBAFD00CEDFF5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F808E2C168CBAFD00CEDFF5 /* SystemConfiguration.framework */; };
-		6F808E3C168DA4D300CEDFF5 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */; };
-		6F808E3D168DA4D300CEDFF5 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1C168CBA6300CEDFF5 /* GAI.h */; };
-		6F808E3E168DA4D300CEDFF5 /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */; };
-		6F808E3F168DA4D300CEDFF5 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1E168CBA6300CEDFF5 /* GAITracker.h */; };
-		6F808E40168DA4D300CEDFF5 /* GAITransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1F168CBA6300CEDFF5 /* GAITransaction.h */; };
-		6F808E41168DA4D300CEDFF5 /* GAITransactionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E20168CBA6300CEDFF5 /* GAITransactionItem.h */; };
+		D2E12C2D17DCC04C00064FA0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E12C2C17DCC04C00064FA0 /* SystemConfiguration.framework */; };
+		D2E12C2F17DCC06B00064FA0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E12C2E17DCC06B00064FA0 /* CoreData.framework */; };
+		D2E12C4C17DCC0D400064FA0 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4417DCC0D400064FA0 /* FlashRuntimeExtensions.h */; };
+		D2E12C4D17DCC0D400064FA0 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4517DCC0D400064FA0 /* GAI.h */; };
+		D2E12C4E17DCC0D400064FA0 /* GAIDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4617DCC0D400064FA0 /* GAIDictionaryBuilder.h */; };
+		D2E12C4F17DCC0D400064FA0 /* GAIFields.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4717DCC0D400064FA0 /* GAIFields.h */; };
+		D2E12C5017DCC0D400064FA0 /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4817DCC0D400064FA0 /* GAILogger.h */; };
+		D2E12C5117DCC0D400064FA0 /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4917DCC0D400064FA0 /* GAITrackedViewController.h */; };
+		D2E12C5217DCC0D400064FA0 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4A17DCC0D400064FA0 /* GAITracker.h */; };
+		D2E12C5317DCC0D400064FA0 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E12C4B17DCC0D400064FA0 /* libGoogleAnalyticsServices.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,15 +46,16 @@
 		6F808E09168CB8A300CEDFF5 /* GAExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAExtension.h; sourceTree = "<group>"; };
 		6F808E0A168CB8A300CEDFF5 /* GAExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAExtension.m; sourceTree = "<group>"; };
 		6F808E0B168CB8A300CEDFF5 /* GAExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAExtension-Prefix.pch"; sourceTree = "<group>"; };
-		6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = Libraries/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
-		6F808E1C168CBA6300CEDFF5 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Libraries/GAI.h; sourceTree = "<group>"; };
-		6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Libraries/GAITrackedViewController.h; sourceTree = "<group>"; };
-		6F808E1E168CBA6300CEDFF5 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Libraries/GAITracker.h; sourceTree = "<group>"; };
-		6F808E1F168CBA6300CEDFF5 /* GAITransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITransaction.h; path = Libraries/GAITransaction.h; sourceTree = "<group>"; };
-		6F808E20168CBA6300CEDFF5 /* GAITransactionItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITransactionItem.h; path = Libraries/GAITransactionItem.h; sourceTree = "<group>"; };
-		6F808E21168CBA6300CEDFF5 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
-		6F808E2A168CBAF000CEDFF5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
-		6F808E2C168CBAFD00CEDFF5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D2E12C2C17DCC04C00064FA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2E12C2E17DCC06B00064FA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D2E12C4417DCC0D400064FA0 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = Libraries/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		D2E12C4517DCC0D400064FA0 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Libraries/GAI.h; sourceTree = "<group>"; };
+		D2E12C4617DCC0D400064FA0 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Libraries/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		D2E12C4717DCC0D400064FA0 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Libraries/GAIFields.h; sourceTree = "<group>"; };
+		D2E12C4817DCC0D400064FA0 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Libraries/GAILogger.h; sourceTree = "<group>"; };
+		D2E12C4917DCC0D400064FA0 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Libraries/GAITrackedViewController.h; sourceTree = "<group>"; };
+		D2E12C4A17DCC0D400064FA0 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Libraries/GAITracker.h; sourceTree = "<group>"; };
+		D2E12C4B17DCC0D400064FA0 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Libraries/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F808E2D168CBAFD00CEDFF5 /* SystemConfiguration.framework in Frameworks */,
-				6F808E2B168CBAF000CEDFF5 /* CoreData.framework in Frameworks */,
-				6F808E28168CBA6300CEDFF5 /* libGoogleAnalytics.a in Frameworks */,
+				D2E12C2F17DCC06B00064FA0 /* CoreData.framework in Frameworks */,
+				D2E12C2D17DCC04C00064FA0 /* SystemConfiguration.framework in Frameworks */,
+				D2E12C5317DCC0D400064FA0 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +93,8 @@
 		6F808DBC168CB84900CEDFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6F808E2C168CBAFD00CEDFF5 /* SystemConfiguration.framework */,
-				6F808E2A168CBAF000CEDFF5 /* CoreData.framework */,
+				D2E12C2E17DCC06B00064FA0 /* CoreData.framework */,
+				D2E12C2C17DCC04C00064FA0 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,13 +142,14 @@
 		6F808E29168CBA6F00CEDFF5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */,
-				6F808E1C168CBA6300CEDFF5 /* GAI.h */,
-				6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */,
-				6F808E1E168CBA6300CEDFF5 /* GAITracker.h */,
-				6F808E1F168CBA6300CEDFF5 /* GAITransaction.h */,
-				6F808E20168CBA6300CEDFF5 /* GAITransactionItem.h */,
-				6F808E21168CBA6300CEDFF5 /* libGoogleAnalytics.a */,
+				D2E12C4417DCC0D400064FA0 /* FlashRuntimeExtensions.h */,
+				D2E12C4517DCC0D400064FA0 /* GAI.h */,
+				D2E12C4617DCC0D400064FA0 /* GAIDictionaryBuilder.h */,
+				D2E12C4717DCC0D400064FA0 /* GAIFields.h */,
+				D2E12C4817DCC0D400064FA0 /* GAILogger.h */,
+				D2E12C4917DCC0D400064FA0 /* GAITrackedViewController.h */,
+				D2E12C4A17DCC0D400064FA0 /* GAITracker.h */,
+				D2E12C4B17DCC0D400064FA0 /* libGoogleAnalyticsServices.a */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -158,12 +161,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F808E3C168DA4D300CEDFF5 /* FlashRuntimeExtensions.h in Headers */,
-				6F808E3D168DA4D300CEDFF5 /* GAI.h in Headers */,
-				6F808E3E168DA4D300CEDFF5 /* GAITrackedViewController.h in Headers */,
-				6F808E3F168DA4D300CEDFF5 /* GAITracker.h in Headers */,
-				6F808E40168DA4D300CEDFF5 /* GAITransaction.h in Headers */,
-				6F808E41168DA4D300CEDFF5 /* GAITransactionItem.h in Headers */,
+				D2E12C4C17DCC0D400064FA0 /* FlashRuntimeExtensions.h in Headers */,
+				D2E12C4D17DCC0D400064FA0 /* GAI.h in Headers */,
+				D2E12C4E17DCC0D400064FA0 /* GAIDictionaryBuilder.h in Headers */,
+				D2E12C4F17DCC0D400064FA0 /* GAIFields.h in Headers */,
+				D2E12C5017DCC0D400064FA0 /* GAILogger.h in Headers */,
+				D2E12C5117DCC0D400064FA0 /* GAITrackedViewController.h in Headers */,
+				D2E12C5217DCC0D400064FA0 /* GAITracker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
