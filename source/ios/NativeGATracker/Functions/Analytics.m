@@ -26,7 +26,6 @@ DEFINE_ANE_FUNCTION(createTracker) {
     }
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
-    [tracker setSessionTimeout:-1];
 
     return result;
 }

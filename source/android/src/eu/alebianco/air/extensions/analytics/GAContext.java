@@ -60,7 +60,7 @@ public class GAContext extends FREContext {
         functions.put("setSecure", new SetSecure());
         functions.put("getSampleRate", new GetSampleRate());
         functions.put("setSampleRate", new SetSampleRate());
-        functions.put("startNewSession", new StartNewSession());
+        functions.put("setSessionControl", new SetSessionControl());
         functions.put("trackData", new TrackData());
         functions.put("setCustomDimension", new SetCustomDimension());
         functions.put("setCustomMetric", new SetCustomMetric());

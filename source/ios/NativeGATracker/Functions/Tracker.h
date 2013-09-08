@@ -13,6 +13,7 @@
 #import "FREConversionUtil.h"
 #import "FREUtils.h"
 #import "GAI.h"
+#import "GAIFields.h"
 
 typedef enum {
     NONE,
@@ -33,7 +34,7 @@ DEFINE_ANE_FUNCTION(getSecure);
 DEFINE_ANE_FUNCTION(setSecure);
 DEFINE_ANE_FUNCTION(getSampleRate);
 DEFINE_ANE_FUNCTION(setSampleRate);
-DEFINE_ANE_FUNCTION(startNewSession);
+DEFINE_ANE_FUNCTION(setSessionControl);
 DEFINE_ANE_FUNCTION(trackData);
 DEFINE_ANE_FUNCTION(setCustomMetric);
 DEFINE_ANE_FUNCTION(setCustomDimension);

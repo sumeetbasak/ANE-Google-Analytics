@@ -13,13 +13,14 @@ package eu.alebianco.air.extensions.analytics.functions;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
+import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.Tracker;
 import com.stackoverflow.util.StackTraceInfo;
 import eu.alebianco.air.extensions.utils.FREUtils;
 import eu.alebianco.air.extensions.utils.LogLevel;
 
-public class StartNewSession implements FREFunction {
+public class SetSessionControl implements FREFunction {
 
     @Override
     public FREObject call(FREContext context, FREObject[] args) {
@@ -35,8 +36,15 @@ public class StartNewSession implements FREFunction {
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'trackingId' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
+        String value;
+        try {
+            value = args[1].getAsString();
+        } catch (Exception e) {
+            value = null;
+        }
+
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
-        tracker.setStartSession(true);
+        tracker.set(Fields.SESSION_CONTROL, value);
 
         return result;
     }

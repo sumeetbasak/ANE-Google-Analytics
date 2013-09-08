@@ -16,9 +16,6 @@ public interface ITracker extends IDisposable {
 
 	function get trackingID():String;
 
-	function get sessionTimeout():uint;
-	function set sessionTimeout(value:uint):void;
-
 	function get appID():String;
 	function set appID(value:String):void;
 

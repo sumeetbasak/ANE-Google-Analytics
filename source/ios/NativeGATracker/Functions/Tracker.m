@@ -181,7 +181,7 @@ DEFINE_ANE_FUNCTION(setSampleRate) {
 
     return result;
 }
-DEFINE_ANE_FUNCTION(startNewSession) {
+DEFINE_ANE_FUNCTION(setSessionControl) {
     FREObject result = NULL;
 
     NSString *trackingId;
@@ -193,8 +193,16 @@ DEFINE_ANE_FUNCTION(startNewSession) {
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'trackingId' parameter on method '%s'.", __FUNCTION__);
     }
 
+    NSString *value;
+    @try {
+        trackingId = [FREConversionUtil toString:argv[1]];
+    }
+    @catch (NSException *exception) {
+        value = NULL;
+    }
+
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
-    [tracker setSessionStart:YES];
+    [tracker set:kGAISessionControl value:value];
 
     return result;
 }
