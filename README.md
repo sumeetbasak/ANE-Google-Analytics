@@ -2,7 +2,7 @@
 
 This is an Air native extension for Google Analytics on the iOS and Android platforms.
 
-**NOTE** The current release of the extension supports the new [Application profile](https://support.google.com/analytics/answer/1009714) for Google Analytics.
+**NOTE** The current release of the extension should be used with the new [App profile](https://support.google.com/analytics/answer/1009714) for Google Analytics.
 
 ## Introduction
 
@@ -66,7 +66,7 @@ The code below shows the most basic example:
 
 The first iteration of the demo project [ANE-Google-Analytics-Demo](https://github.com/alebianco/ANE-Google-Analytics-Demo) is now complete.
 Its purpose is to showcase the basic project setup and the features of the extension.  
-As a first iteration, only screens and events tracking are implemented and enabled. Over time I'll complete it by adding more tracking options to fully exploid the extension.
+As a first iteration, only screens and events tracking are implemented and enabled. Over time I'll complete it by adding more tracking options to fully exploit the extension.
 
 ## Building
 
