@@ -69,14 +69,6 @@ public final class Analytics implements IAnalytics {
 		return handleResultFromExtension(context.call("getVersion"), String);
 	}
 
-	public function get debug():Boolean {
-		return handleResultFromExtension(context.call("getDebug"), Boolean) as Boolean;
-	}
-
-	public function set debug(value:Boolean):void {
-		handleResultFromExtension(context.call("setDebug", value));
-	}
-
 	public function get optOut():Boolean {
 		return handleResultFromExtension(context.call("getOptOut"), Boolean) as Boolean;
 	}

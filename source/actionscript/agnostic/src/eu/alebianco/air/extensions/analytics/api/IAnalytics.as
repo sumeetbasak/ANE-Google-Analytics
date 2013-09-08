@@ -16,8 +16,6 @@ public interface IAnalytics extends IDisposable {
 
 	function get version():String;
 
-	function get debug():Boolean;
-	function set debug(value:Boolean):void;
 
 	function get optOut():Boolean;
 	function set optOut(value:Boolean):void;

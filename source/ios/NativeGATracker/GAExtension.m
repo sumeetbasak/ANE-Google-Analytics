@@ -18,8 +18,6 @@ void GAContextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx,
 
             MAP_FUNCTION( createTracker, NULL ),
             MAP_FUNCTION( closeTracker, NULL ),
-            MAP_FUNCTION( setDebug, NULL ),
-            MAP_FUNCTION( getDebug, NULL ),
             MAP_FUNCTION( setOptOut, NULL ),
             MAP_FUNCTION( getOptOut, NULL ),
             MAP_FUNCTION( setDryRun, NULL ),

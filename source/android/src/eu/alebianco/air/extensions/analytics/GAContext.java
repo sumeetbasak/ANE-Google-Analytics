@@ -41,8 +41,6 @@ public class GAContext extends FREContext {
 
         functions.put("createTracker", new CreateTracker());
         functions.put("closeTracker", new CloseTracker());
-        functions.put("getDebug", new GetDebug());
-        functions.put("setDebug", new SetDebug());
         functions.put("getOptOut", new GetOptOut());
         functions.put("setOptOut", new SetOptOut());
         functions.put("getDryRun", new GetDryRun());

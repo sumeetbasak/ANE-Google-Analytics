@@ -21,16 +21,6 @@ public interface IAnalytics extends IDisposable {
 	 */
 	function get version():String;
 	/**
-	 * Indicates whether or not the debug mode is enabled.
-	 * <p>When debug is enabled, the Google tracker will write additional messages to the device logs.</p>
-	 * @default false
-	 */
-	function get debug():Boolean;
-	/**
-	 * @private
-	 */
-	function set debug(value:Boolean):void;
-	/**
 	 * Sets or resets the application-level opt out flag.
 	 * <p>If set, no hits will be sent to Google Analytics. The value of this flag will persist across app starts.</p>
 	 * @default false

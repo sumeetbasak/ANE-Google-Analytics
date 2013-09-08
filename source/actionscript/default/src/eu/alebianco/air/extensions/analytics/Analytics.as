@@ -74,17 +74,6 @@ public final class Analytics implements IAnalytics {
 	/**
 	 * @inheritDoc
 	 */
-	public function get debug():Boolean {
-		return false;
-	}
-	/**
-	 * @private
-	 */
-	public function set debug(value:Boolean):void {
-	}
-	/**
-	 * @inheritDoc
-	 */
 	public function get optOut():Boolean {
 		return false;
 	}
