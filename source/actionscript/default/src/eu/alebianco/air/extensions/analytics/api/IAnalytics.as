@@ -41,6 +41,16 @@ public interface IAnalytics extends IDisposable {
 	 */
 	function set optOut(value:Boolean):void;
 	/**
+	 * Toggles dry run mode.
+	 * <p>In dry run mode, the normal code paths are executed locally, but hits are not sent to Google Analytics servers.</p>
+	 * @default false
+	 */
+	function get dryRun():Boolean;
+	/**
+	 * @private
+	 */
+	function set dryRun(value:Boolean):void;
+	/**
 	 * Returns a tracker for the specified Google Analytics account ID.
 	 * <p>When the tracker is created, some information about the current application (id, name and version) are
 	 * automatically set. They can be overridden before tracking any kind of data.</p>

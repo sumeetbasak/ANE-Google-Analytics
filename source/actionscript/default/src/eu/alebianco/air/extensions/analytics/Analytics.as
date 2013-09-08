@@ -94,6 +94,17 @@ public final class Analytics implements IAnalytics {
 	public function set optOut(value:Boolean):void {
 	}
 	/**
+	 * @inheritDoc
+	 */
+	public function get dryRun():Boolean {
+		return false;
+	}
+	/**
+	 * @private
+	 */
+	public function set dryRun(value:Boolean):void {
+	}
+	/**
 	 * Dispose the extension and clear any object reference to ready it for garbage collection.
 	 * <p>All existing trackers are closed immediately and can't be used anymore.</p>
 	 * <p>Existing references to the class will be unusable.</p>

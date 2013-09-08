@@ -22,6 +22,9 @@ public interface IAnalytics extends IDisposable {
 	function get optOut():Boolean;
 	function set optOut(value:Boolean):void;
 
+	function get dryRun():Boolean;
+	function set dryRun(value:Boolean):void;
+
 	function getTracker(trackingId:String):ITracker;
 	function hasTracker(trackingId:String):Boolean;
 	function closeTracker(trackingId:String):void;

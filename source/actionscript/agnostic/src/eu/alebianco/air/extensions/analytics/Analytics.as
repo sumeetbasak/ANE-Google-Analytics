@@ -85,6 +85,14 @@ public final class Analytics implements IAnalytics {
 		handleResultFromExtension(context.call("setOptOut", value));
 	}
 
+	public function get dryRun():Boolean {
+		return handleResultFromExtension(context.call("getDryRun")) as Boolean;
+	}
+
+	public function set dryRun(value:Boolean):void {
+		handleResultFromExtension(context.call("setDryRun", value));
+	}
+
 	public function hasTracker(trackingId:String):Boolean {
 		if (!ID_VALIDATOR.test(trackingId))
 			throw new ArgumentError("The provided tracking ID (" + trackingId + ") is invalid, it should follow the format UA-00000-0.");
