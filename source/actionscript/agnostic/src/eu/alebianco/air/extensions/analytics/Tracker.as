@@ -95,7 +95,8 @@ internal class Tracker implements ITracker {
 		if (index == 0)
 			throw new ArgumentError("Metrics and Dimensions indexes are 1-based.");
 
-		handleResultFromExtension(context.call("setCustomMetric", id, index, value));
+		const normalized:String = value.toString();
+		handleResultFromExtension(context.call("setCustomMetric", id, index, normalized));
 	}
 	public function setCustomDimension(index:uint, value:String):void {
 		if (index == 0)

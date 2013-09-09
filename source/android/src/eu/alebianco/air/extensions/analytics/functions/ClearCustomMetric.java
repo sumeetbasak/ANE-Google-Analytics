@@ -20,7 +20,7 @@ import com.stackoverflow.util.StackTraceInfo;
 import eu.alebianco.air.extensions.utils.FREUtils;
 import eu.alebianco.air.extensions.utils.LogLevel;
 
-public class SetCustomDimension implements FREFunction {
+public class ClearCustomMetric implements FREFunction {
 
     @Override
     public FREObject call(FREContext context, FREObject[] args) {
@@ -48,17 +48,7 @@ public class SetCustomDimension implements FREFunction {
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'index' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
-        String value;
-        try {
-            value = args[2].getAsString();
-        } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
-                    "Unable to read the 'value' parameter. [Exception:(type:%s, method:%s)].",
-                    FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
-            return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'value' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
-        }
-
-        tracker.set(Fields.customDimension(index), value);
+        tracker.set(Fields.customMetric(index), null);
 
         return result;
     }

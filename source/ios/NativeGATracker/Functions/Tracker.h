@@ -37,8 +37,8 @@ DEFINE_ANE_FUNCTION(setSampleRate);
 DEFINE_ANE_FUNCTION(setSessionControl);
 DEFINE_ANE_FUNCTION(trackData);
 DEFINE_ANE_FUNCTION(setCustomMetric);
-DEFINE_ANE_FUNCTION(setCustomDimension);
 DEFINE_ANE_FUNCTION(clearCustomMetric);
+DEFINE_ANE_FUNCTION(setCustomDimension);
 DEFINE_ANE_FUNCTION(clearCustomDimension);
 
 @end

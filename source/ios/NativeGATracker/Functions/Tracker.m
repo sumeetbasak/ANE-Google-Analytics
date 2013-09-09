@@ -263,45 +263,9 @@ DEFINE_ANE_FUNCTION(setCustomMetric) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    NSInteger index;
+    NSUInteger index;
     @try {
-        index = [FREConversionUtil toInt:argv[1]];
-    }
-    @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'index' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'index' parameter on method '%s'.", __FUNCTION__);
-    }
-
-    NSNumber *value;
-    @try {
-        value = [FREConversionUtil toNumber:argv[2]];
-    }
-    @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'value' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
-    }
-
-    [tracker setCustom:index metric:value];
-
-    return result;
-}
-DEFINE_ANE_FUNCTION(setCustomDimension) {
-    FREObject result = NULL;
-
-    NSString *trackingId;
-    @try {
-        trackingId = [FREConversionUtil toString:argv[0]];
-    }
-    @catch (NSException *exception) {
-        logEvent(context, kFatal, @"Unable to read the 'trackingId' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
-        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'trackingId' parameter on method '%s'.", __FUNCTION__);
-    }
-
-    id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
-
-    NSInteger index;
-    @try {
-        index = [FREConversionUtil toInt:argv[1]];
+        index = [FREConversionUtil toUInt:argv[1]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to read the 'index' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
@@ -317,7 +281,7 @@ DEFINE_ANE_FUNCTION(setCustomDimension) {
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setCustom:index dimension:value];
+    [tracker set:[GAIFields customMetricForIndex:index] value:value];
 
     return result;
 }
@@ -335,16 +299,52 @@ DEFINE_ANE_FUNCTION(clearCustomMetric) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    NSInteger index;
+    NSUInteger index;
     @try {
-        index = [FREConversionUtil toInt:argv[1]];
+        index = [FREConversionUtil toUInt:argv[1]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to read the 'index' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'index' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setCustom:index metric:nil];
+    [tracker set:[GAIFields customMetricForIndex:index] value:NULL];
+
+    return result;
+}
+DEFINE_ANE_FUNCTION(setCustomDimension) {
+    FREObject result = NULL;
+
+    NSString *trackingId;
+    @try {
+        trackingId = [FREConversionUtil toString:argv[0]];
+    }
+    @catch (NSException *exception) {
+        logEvent(context, kFatal, @"Unable to read the 'trackingId' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'trackingId' parameter on method '%s'.", __FUNCTION__);
+    }
+
+    id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+
+    NSUInteger index;
+    @try {
+        index = [FREConversionUtil toUInt:argv[1]];
+    }
+    @catch (NSException *exception) {
+        logEvent(context, kFatal, @"Unable to read the 'index' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'index' parameter on method '%s'.", __FUNCTION__);
+    }
+
+    NSString *value;
+    @try {
+        value = [FREConversionUtil toString:argv[2]];
+    }
+    @catch (NSException *exception) {
+        logEvent(context, kFatal, @"Unable to read the 'value' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
+    }
+
+    [tracker set:[GAIFields customDimensionForIndex:index] value:value];
 
     return result;
 }
@@ -362,16 +362,16 @@ DEFINE_ANE_FUNCTION(clearCustomDimension) {
 
     id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 
-    NSInteger index;
+    NSUInteger index;
     @try {
-        index = [FREConversionUtil toInt:argv[1]];
+        index = [FREConversionUtil toUInt:argv[1]];
     }
     @catch (NSException *exception) {
         logEvent(context, kFatal, @"Unable to read the 'index' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'index' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [tracker setCustom:index dimension:nil];
+    [tracker set:[GAIFields customDimensionForIndex:index] value:NULL];
 
     return result;
 }
