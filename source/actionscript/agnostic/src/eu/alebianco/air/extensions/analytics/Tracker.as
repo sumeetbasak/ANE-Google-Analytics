@@ -60,7 +60,7 @@ internal class Tracker implements ITracker {
 	public function get clientID():String {
 		return handleResultFromExtension(context.call("getClientID", id), String) as String;
 	}
-	public function set clientID(value:String) {
+	public function set clientID(value:String):void {
 		handleResultFromExtension(context.call("setClientID", id, value));
 	}
 	public function get anonymous():Boolean {
@@ -117,14 +117,14 @@ internal class Tracker implements ITracker {
 		handleResultFromExtension(context.call("clearCustomDimension", id, index));
 	}
 	public function send(data:Hit):void {
-		handleResultFromExtension(context.call("trackData", id, data.type.name, data));
+		handleResultFromExtension(context.call("trackData", id, data.type.key, data));
 		if (_sessionStarted) {
 			handleResultFromExtension(context.call("setSessionControl", id, null));
 			_sessionStarted = false;
 		}
 	}
 	public function buildView(screenName:String):IViewBuilder {
-		return new ViewBuilder(this, screenName);
+		return new AppViewBuilder(this, screenName);
 	}
 	public function buildEvent(category:String, action:String):IEventBuilder {
 		return new EventBuilder(this, category, action);
@@ -138,8 +138,8 @@ internal class Tracker implements ITracker {
 	public function buildSocial(network:String, action:String):ISocialBuilder {
 		return new SocialBuilder(this, network, action);
 	}
-	public function buildTransaction(id:String, cost:Number):ITransactionBuilder {
-		return new TransactionBuilder(this, id, cost);
+	public function buildTransaction(id:String, affiliation:String, revenue:Number, tax:Number, shipping:Number):ITransactionBuilder {
+		return new TransactionBuilder(this, id, affiliation, revenue, tax, shipping);
 	}
 	public function dispose():void {
 		handleResultFromExtension(context.call("closeTracker", id));

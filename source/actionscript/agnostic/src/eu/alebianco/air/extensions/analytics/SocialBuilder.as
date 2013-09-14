@@ -19,7 +19,7 @@ internal class SocialBuilder implements ISocialBuilder {
 
 	internal var network:String;
 	internal var action:String;
-	internal var content:String = null;
+	internal var target:String = null;
 
 	public function SocialBuilder(tracker:Tracker, network:String, action:String) {
 		this.tracker = tracker;
@@ -28,8 +28,8 @@ internal class SocialBuilder implements ISocialBuilder {
 		this.action = action;
 	}
 
-	public function forContent(content:String):ISocialBuilder {
-		this.content = content;
+	public function forTarget(target:String):ISocialBuilder {
+		this.target = target;
 		return this;
 	}
 

@@ -16,11 +16,9 @@ public enum LogLevel {
 	
 	VERBOSE("VERBOSE", Log.VERBOSE),
 	INFO("INFO", Log.INFO),
-	DEBUG("DEBUG", Log.DEBUG),
     WARNING("WARNING", Log.WARN),
-	ERROR("ERROR", Log.ERROR),
-	FATAL("FATAL", Log.ERROR);
-	
+	ERROR("ERROR", Log.ERROR);
+
 	private final String name;
 	private final int priority;
 	

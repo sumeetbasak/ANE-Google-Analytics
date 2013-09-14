@@ -13,20 +13,20 @@ package eu.alebianco.air.extensions.analytics {
 import eu.alebianco.air.extensions.analytics.api.Hit;
 import eu.alebianco.air.extensions.analytics.api.IViewBuilder;
 
-internal class ViewBuilder implements IViewBuilder {
+internal class AppViewBuilder implements IViewBuilder {
 
 	private var tracker:Tracker;
 
 	internal var screen:String;
 
-	public function ViewBuilder(tracker:Tracker, screenName:String) {
+	public function AppViewBuilder(tracker:Tracker, screenName:String) {
 		this.tracker = tracker;
 
 		this.screen = screenName;
 	}
 
 	public function create():Hit {
-		return new View(this);
+		return new AppView(this);
 	}
 
 	public function track():void {

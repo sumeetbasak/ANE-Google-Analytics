@@ -17,12 +17,12 @@ public class HitType extends Enum {
 		initEnum(HitType);
 	}
 
-	public static const EVENT:HitType = new HitType();
-	public static const VIEW:HitType = new HitType();
-	public static const TRANSACTION:HitType = new HitType();
-	public static const EXCEPTION:HitType = new HitType();
-	public static const SOCIAL:HitType = new HitType();
-	public static const TIMING:HitType = new HitType();
+	public static const EVENT:HitType = new HitType("event");
+	public static const APP_VIEW:HitType = new HitType("appview");
+	public static const TRANSACTION:HitType = new HitType("transaction");
+	public static const EXCEPTION:HitType = new HitType("exception");
+	public static const SOCIAL:HitType = new HitType("social");
+	public static const TIMING:HitType = new HitType("timing");
 
 	public static function getConstants():Vector.<HitType> {
 		return Vector.<HitType>(Enum.getConstants(HitType));
@@ -31,9 +31,16 @@ public class HitType extends Enum {
 		return HitType(Enum.parseConstant(HitType, constantName, caseSensitive));
 	}
 
-	public function HitType() {
+    private var _key:String;
+
+	public function HitType(key:String) {
 		super();
+        this._key = key
 	}
+
+    internal function get key():String {
+        return _key;
+    }
 
 	override public function toString():String {
 		return "[HitType (name: " + name + ")]";

@@ -11,9 +11,7 @@
 package eu.alebianco.air.extensions.analytics.api {
 
 public interface ITransactionBuilder extends IHitBuilder {
-	function withAffiliation(affiliation:String):ITransactionBuilder;
-	function withShippingCost(cost:Number):ITransactionBuilder;
-	function withTaxCost(cost:Number):ITransactionBuilder;
+    function forCurrency(code:String):ITransactionBuilder;
 
 	function createProduct(sku:String, name:String, price:Number, quantity:uint):IProductBuilder;
 }

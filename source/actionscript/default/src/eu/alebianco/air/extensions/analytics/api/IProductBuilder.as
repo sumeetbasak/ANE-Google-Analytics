@@ -20,7 +20,14 @@ public interface IProductBuilder {
 	 * @param category  the new value for category.
 	 * @return itself
 	 */
-	function inCategory(category:String):IProductBuilder
+    function inCategory(category:String):IProductBuilder;
+    /**
+     * Sets the product's price currency.
+     * @see https://developers.google.com/analytics/devguides/platform/features/currencies
+     * @param code  the currency code. Must be one of the supported value.
+     * @return itself
+     */
+    function forCurrency(code:String):IProductBuilder;
 	/**
 	 * Builds a Product with the parameters in this builder.
 	 * @return a new product.

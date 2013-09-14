@@ -31,7 +31,7 @@ public class SetClientID implements FREFunction {
         try {
             trackingId = args[0].getAsString();
         } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
+            FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to read the 'trackingId' parameter. [Exception:(type:%s, method:%s)].",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'trackingId' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
@@ -39,18 +39,18 @@ public class SetClientID implements FREFunction {
 
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
 
-        String version;
+        String id;
         try {
-            version = args[1].getAsString();
+            id = args[1].getAsString();
         } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
-                    "Unable to read the 'version' parameter. [Exception:(type:%s, method:%s)].",
+            FREUtils.logEvent(context, LogLevel.ERROR,
+                    "Unable to read the 'id' parameter. [Exception:(type:%s, method:%s)].",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
             Log.e("ANE", "got an error", e);
-            return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'version' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
+            return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'id' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
-        tracker.set(Fields.CLIENT_ID, version);
+        tracker.set(Fields.CLIENT_ID, id);
 
         return result;
     }

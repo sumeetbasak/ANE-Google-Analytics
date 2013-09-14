@@ -28,7 +28,7 @@ public class SetDryRun implements FREFunction {
         try {
             value = args[0].getAsBool();
         } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
+            FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to read the 'value' parameter. [Exception:(type:%s, method:%s)].",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'value' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));

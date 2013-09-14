@@ -30,7 +30,7 @@ public class GetAppID implements FREFunction {
         try {
             trackingId = args[0].getAsString();
         } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
+            FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to read the 'trackingId' parameter. [Exception:(type:%s, method:%s)]",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'trackingId' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));

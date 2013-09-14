@@ -27,17 +27,11 @@ void logEvent(FREContext ctx, enum LogLevel level, NSString *format, ...) {
         case kInfo:
             tag = @"INFO";
             break;
-        case kDebug:
-            tag = @"DEBUG";
-            break;
         case kWarning:
             tag = @"WARNING";
             break;
         case kError:
             tag = @"ERROR";
-            break;
-        case kFatal:
-            tag = @"FATAL";
             break;
         default:
             tag = @"INFO";

@@ -12,15 +12,15 @@ package eu.alebianco.air.extensions.analytics {
 
 import eu.alebianco.air.extensions.analytics.api.Hit;
 
-internal class View implements Hit {
+internal class AppView implements Hit {
 
 	private var _screen:String;
 
     public function get type():HitType {
-        return HitType.VIEW;
+        return HitType.APP_VIEW;
     }
 
-    public function View(builder:ViewBuilder) {
+    public function AppView(builder:AppViewBuilder) {
 		_screen = builder.screen;
 	}
 

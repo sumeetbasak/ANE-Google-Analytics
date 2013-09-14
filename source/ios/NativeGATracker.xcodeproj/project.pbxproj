@@ -7,14 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F808E0F168CBA3400CEDFF5 /* Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E00168CB8A300CEDFF5 /* Analytics.m */; };
-		6F808E11168CBA3400CEDFF5 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E02168CB8A300CEDFF5 /* AppInfo.m */; };
-		6F808E13168CBA3400CEDFF5 /* GetVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E04168CB8A300CEDFF5 /* GetVersion.m */; };
-		6F808E15168CBA3400CEDFF5 /* IsSupported.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E06168CB8A300CEDFF5 /* IsSupported.m */; };
-		6F808E17168CBA3400CEDFF5 /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E08168CB8A300CEDFF5 /* Tracker.m */; };
 		6F808E18168CBA4300CEDFF5 /* FREConversionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808DFB168CB8A300CEDFF5 /* FREConversionUtil.m */; };
 		6F808E19168CBA4300CEDFF5 /* FREUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808DFD168CB8A300CEDFF5 /* FREUtils.m */; };
 		6F808E1A168CBA4300CEDFF5 /* GAExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E0A168CB8A300CEDFF5 /* GAExtension.m */; };
+		D2921B0717DF98C0004B1118 /* Anonymous.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AE317DF98C0004B1118 /* Anonymous.h */; };
+		D2921B0817DF98C0004B1118 /* Anonymous.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AE417DF98C0004B1118 /* Anonymous.m */; };
+		D2921B0917DF98C0004B1118 /* AppID.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AE517DF98C0004B1118 /* AppID.h */; };
+		D2921B0A17DF98C0004B1118 /* AppID.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AE617DF98C0004B1118 /* AppID.m */; };
+		D2921B0B17DF98C0004B1118 /* AppName.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AE717DF98C0004B1118 /* AppName.h */; };
+		D2921B0C17DF98C0004B1118 /* AppName.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AE817DF98C0004B1118 /* AppName.m */; };
+		D2921B0D17DF98C0004B1118 /* AppVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AE917DF98C0004B1118 /* AppVersion.h */; };
+		D2921B0E17DF98C0004B1118 /* AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AEA17DF98C0004B1118 /* AppVersion.m */; };
+		D2921B0F17DF98C0004B1118 /* ClientID.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AEB17DF98C0004B1118 /* ClientID.h */; };
+		D2921B1017DF98C0004B1118 /* ClientID.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AEC17DF98C0004B1118 /* ClientID.m */; };
+		D2921B1117DF98C0004B1118 /* CloseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AED17DF98C0004B1118 /* CloseTracker.h */; };
+		D2921B1217DF98C0004B1118 /* CloseTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AEE17DF98C0004B1118 /* CloseTracker.m */; };
+		D2921B1317DF98C0004B1118 /* CreateTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AEF17DF98C0004B1118 /* CreateTracker.h */; };
+		D2921B1417DF98C0004B1118 /* CreateTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AF017DF98C0004B1118 /* CreateTracker.m */; };
+		D2921B1517DF98C0004B1118 /* CustomDimension.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AF117DF98C0004B1118 /* CustomDimension.h */; };
+		D2921B1617DF98C0004B1118 /* CustomDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AF217DF98C0004B1118 /* CustomDimension.m */; };
+		D2921B1717DF98C0004B1118 /* CustomMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AF317DF98C0004B1118 /* CustomMetric.h */; };
+		D2921B1817DF98C0004B1118 /* CustomMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AF417DF98C0004B1118 /* CustomMetric.m */; };
+		D2921B1917DF98C0004B1118 /* DryRun.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AF517DF98C0004B1118 /* DryRun.h */; };
+		D2921B1A17DF98C0004B1118 /* DryRun.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AF617DF98C0004B1118 /* DryRun.m */; };
+		D2921B1B17DF98C0004B1118 /* GetVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AF717DF98C0004B1118 /* GetVersion.h */; };
+		D2921B1C17DF98C0004B1118 /* GetVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AF817DF98C0004B1118 /* GetVersion.m */; };
+		D2921B1D17DF98C0004B1118 /* IsSupported.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AF917DF98C0004B1118 /* IsSupported.h */; };
+		D2921B1E17DF98C0004B1118 /* IsSupported.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AFA17DF98C0004B1118 /* IsSupported.m */; };
+		D2921B1F17DF98C0004B1118 /* LogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AFB17DF98C0004B1118 /* LogLevel.h */; };
+		D2921B2017DF98C0004B1118 /* LogLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AFC17DF98C0004B1118 /* LogLevel.m */; };
+		D2921B2117DF98C0004B1118 /* OptOut.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AFD17DF98C0004B1118 /* OptOut.h */; };
+		D2921B2217DF98C0004B1118 /* OptOut.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921AFE17DF98C0004B1118 /* OptOut.m */; };
+		D2921B2317DF98C0004B1118 /* SampleRate.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921AFF17DF98C0004B1118 /* SampleRate.h */; };
+		D2921B2417DF98C0004B1118 /* SampleRate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B0017DF98C0004B1118 /* SampleRate.m */; };
+		D2921B2517DF98C0004B1118 /* Secure.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B0117DF98C0004B1118 /* Secure.h */; };
+		D2921B2617DF98C0004B1118 /* Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B0217DF98C0004B1118 /* Secure.m */; };
+		D2921B2717DF98C0004B1118 /* SessionControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B0317DF98C0004B1118 /* SessionControl.h */; };
+		D2921B2817DF98C0004B1118 /* SessionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B0417DF98C0004B1118 /* SessionControl.m */; };
+		D2921B2917DF98C0004B1118 /* TrackData.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B0517DF98C0004B1118 /* TrackData.h */; };
+		D2921B2A17DF98C0004B1118 /* TrackData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B0617DF98C0004B1118 /* TrackData.m */; };
+		D2921B4517DF9D73004B1118 /* Track.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3617DF9D73004B1118 /* Track.h */; };
+		D2921B4617DF9D73004B1118 /* TrackAppView.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3717DF9D73004B1118 /* TrackAppView.h */; };
+		D2921B4717DF9D73004B1118 /* TrackAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B3817DF9D73004B1118 /* TrackAppView.m */; };
+		D2921B4817DF9D73004B1118 /* TrackEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3917DF9D73004B1118 /* TrackEvent.h */; };
+		D2921B4917DF9D73004B1118 /* TrackEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B3A17DF9D73004B1118 /* TrackEvent.m */; };
+		D2921B4A17DF9D73004B1118 /* TrackException.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3B17DF9D73004B1118 /* TrackException.h */; };
+		D2921B4B17DF9D73004B1118 /* TrackException.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B3C17DF9D73004B1118 /* TrackException.m */; };
+		D2921B4C17DF9D73004B1118 /* TrackProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3D17DF9D73004B1118 /* TrackProduct.h */; };
+		D2921B4D17DF9D73004B1118 /* TrackProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B3E17DF9D73004B1118 /* TrackProduct.m */; };
+		D2921B4E17DF9D73004B1118 /* TrackSocial.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B3F17DF9D73004B1118 /* TrackSocial.h */; };
+		D2921B4F17DF9D73004B1118 /* TrackSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B4017DF9D73004B1118 /* TrackSocial.m */; };
+		D2921B5017DF9D73004B1118 /* TrackTiming.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B4117DF9D73004B1118 /* TrackTiming.h */; };
+		D2921B5117DF9D73004B1118 /* TrackTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B4217DF9D73004B1118 /* TrackTiming.m */; };
+		D2921B5217DF9D73004B1118 /* TrackTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = D2921B4317DF9D73004B1118 /* TrackTransaction.h */; };
+		D2921B5317DF9D73004B1118 /* TrackTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = D2921B4417DF9D73004B1118 /* TrackTransaction.m */; };
 		D2E12C2D17DCC04C00064FA0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E12C2C17DCC04C00064FA0 /* SystemConfiguration.framework */; };
 		D2E12C2F17DCC06B00064FA0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E12C2E17DCC06B00064FA0 /* CoreData.framework */; };
 		D2E12C4C17DCC0D400064FA0 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E12C4417DCC0D400064FA0 /* FlashRuntimeExtensions.h */; };
@@ -33,19 +79,60 @@
 		6F808DFB168CB8A300CEDFF5 /* FREConversionUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FREConversionUtil.m; sourceTree = "<group>"; };
 		6F808DFC168CB8A300CEDFF5 /* FREUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FREUtils.h; sourceTree = "<group>"; };
 		6F808DFD168CB8A300CEDFF5 /* FREUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FREUtils.m; sourceTree = "<group>"; };
-		6F808DFF168CB8A300CEDFF5 /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
-		6F808E00168CB8A300CEDFF5 /* Analytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Analytics.m; sourceTree = "<group>"; };
-		6F808E01168CB8A300CEDFF5 /* AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
-		6F808E02168CB8A300CEDFF5 /* AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
-		6F808E03168CB8A300CEDFF5 /* GetVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetVersion.h; sourceTree = "<group>"; };
-		6F808E04168CB8A300CEDFF5 /* GetVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetVersion.m; sourceTree = "<group>"; };
-		6F808E05168CB8A300CEDFF5 /* IsSupported.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsSupported.h; sourceTree = "<group>"; };
-		6F808E06168CB8A300CEDFF5 /* IsSupported.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IsSupported.m; sourceTree = "<group>"; };
-		6F808E07168CB8A300CEDFF5 /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
-		6F808E08168CB8A300CEDFF5 /* Tracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
 		6F808E09168CB8A300CEDFF5 /* GAExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAExtension.h; sourceTree = "<group>"; };
 		6F808E0A168CB8A300CEDFF5 /* GAExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAExtension.m; sourceTree = "<group>"; };
 		6F808E0B168CB8A300CEDFF5 /* GAExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAExtension-Prefix.pch"; sourceTree = "<group>"; };
+		D2921AE317DF98C0004B1118 /* Anonymous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Anonymous.h; sourceTree = "<group>"; };
+		D2921AE417DF98C0004B1118 /* Anonymous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Anonymous.m; sourceTree = "<group>"; };
+		D2921AE517DF98C0004B1118 /* AppID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppID.h; sourceTree = "<group>"; };
+		D2921AE617DF98C0004B1118 /* AppID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppID.m; sourceTree = "<group>"; };
+		D2921AE717DF98C0004B1118 /* AppName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppName.h; sourceTree = "<group>"; };
+		D2921AE817DF98C0004B1118 /* AppName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppName.m; sourceTree = "<group>"; };
+		D2921AE917DF98C0004B1118 /* AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersion.h; sourceTree = "<group>"; };
+		D2921AEA17DF98C0004B1118 /* AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppVersion.m; sourceTree = "<group>"; };
+		D2921AEB17DF98C0004B1118 /* ClientID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientID.h; sourceTree = "<group>"; };
+		D2921AEC17DF98C0004B1118 /* ClientID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientID.m; sourceTree = "<group>"; };
+		D2921AED17DF98C0004B1118 /* CloseTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloseTracker.h; sourceTree = "<group>"; };
+		D2921AEE17DF98C0004B1118 /* CloseTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloseTracker.m; sourceTree = "<group>"; };
+		D2921AEF17DF98C0004B1118 /* CreateTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTracker.h; sourceTree = "<group>"; };
+		D2921AF017DF98C0004B1118 /* CreateTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTracker.m; sourceTree = "<group>"; };
+		D2921AF117DF98C0004B1118 /* CustomDimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDimension.h; sourceTree = "<group>"; };
+		D2921AF217DF98C0004B1118 /* CustomDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDimension.m; sourceTree = "<group>"; };
+		D2921AF317DF98C0004B1118 /* CustomMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMetric.h; sourceTree = "<group>"; };
+		D2921AF417DF98C0004B1118 /* CustomMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMetric.m; sourceTree = "<group>"; };
+		D2921AF517DF98C0004B1118 /* DryRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryRun.h; sourceTree = "<group>"; };
+		D2921AF617DF98C0004B1118 /* DryRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryRun.m; sourceTree = "<group>"; };
+		D2921AF717DF98C0004B1118 /* GetVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetVersion.h; sourceTree = "<group>"; };
+		D2921AF817DF98C0004B1118 /* GetVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetVersion.m; sourceTree = "<group>"; };
+		D2921AF917DF98C0004B1118 /* IsSupported.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsSupported.h; sourceTree = "<group>"; };
+		D2921AFA17DF98C0004B1118 /* IsSupported.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSupported.m; sourceTree = "<group>"; };
+		D2921AFB17DF98C0004B1118 /* LogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogLevel.h; sourceTree = "<group>"; };
+		D2921AFC17DF98C0004B1118 /* LogLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogLevel.m; sourceTree = "<group>"; };
+		D2921AFD17DF98C0004B1118 /* OptOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptOut.h; sourceTree = "<group>"; };
+		D2921AFE17DF98C0004B1118 /* OptOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptOut.m; sourceTree = "<group>"; };
+		D2921AFF17DF98C0004B1118 /* SampleRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleRate.h; sourceTree = "<group>"; };
+		D2921B0017DF98C0004B1118 /* SampleRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleRate.m; sourceTree = "<group>"; };
+		D2921B0117DF98C0004B1118 /* Secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secure.h; sourceTree = "<group>"; };
+		D2921B0217DF98C0004B1118 /* Secure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secure.m; sourceTree = "<group>"; };
+		D2921B0317DF98C0004B1118 /* SessionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionControl.h; sourceTree = "<group>"; };
+		D2921B0417DF98C0004B1118 /* SessionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionControl.m; sourceTree = "<group>"; };
+		D2921B0517DF98C0004B1118 /* TrackData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackData.h; sourceTree = "<group>"; };
+		D2921B0617DF98C0004B1118 /* TrackData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackData.m; sourceTree = "<group>"; };
+		D2921B3617DF9D73004B1118 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		D2921B3717DF9D73004B1118 /* TrackAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackAppView.h; sourceTree = "<group>"; };
+		D2921B3817DF9D73004B1118 /* TrackAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackAppView.m; sourceTree = "<group>"; };
+		D2921B3917DF9D73004B1118 /* TrackEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackEvent.h; sourceTree = "<group>"; };
+		D2921B3A17DF9D73004B1118 /* TrackEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackEvent.m; sourceTree = "<group>"; };
+		D2921B3B17DF9D73004B1118 /* TrackException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackException.h; sourceTree = "<group>"; };
+		D2921B3C17DF9D73004B1118 /* TrackException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackException.m; sourceTree = "<group>"; };
+		D2921B3D17DF9D73004B1118 /* TrackProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackProduct.h; sourceTree = "<group>"; };
+		D2921B3E17DF9D73004B1118 /* TrackProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackProduct.m; sourceTree = "<group>"; };
+		D2921B3F17DF9D73004B1118 /* TrackSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackSocial.h; sourceTree = "<group>"; };
+		D2921B4017DF9D73004B1118 /* TrackSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackSocial.m; sourceTree = "<group>"; };
+		D2921B4117DF9D73004B1118 /* TrackTiming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackTiming.h; sourceTree = "<group>"; };
+		D2921B4217DF9D73004B1118 /* TrackTiming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTiming.m; sourceTree = "<group>"; };
+		D2921B4317DF9D73004B1118 /* TrackTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackTransaction.h; sourceTree = "<group>"; };
+		D2921B4417DF9D73004B1118 /* TrackTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTransaction.m; sourceTree = "<group>"; };
 		D2E12C2C17DCC04C00064FA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D2E12C2E17DCC06B00064FA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D2E12C4417DCC0D400064FA0 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = Libraries/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
@@ -102,6 +189,7 @@
 		6F808DE6168CB84900CEDFF5 /* NativeGATracker */ = {
 			isa = PBXGroup;
 			children = (
+				D2921B2B17DF98CB004B1118 /* Commands */,
 				6F808DFE168CB8A300CEDFF5 /* Functions */,
 				6F808DFA168CB8A300CEDFF5 /* FREConversionUtil.h */,
 				6F808DFB168CB8A300CEDFF5 /* FREConversionUtil.m */,
@@ -125,16 +213,42 @@
 		6F808DFE168CB8A300CEDFF5 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				6F808DFF168CB8A300CEDFF5 /* Analytics.h */,
-				6F808E00168CB8A300CEDFF5 /* Analytics.m */,
-				6F808E01168CB8A300CEDFF5 /* AppInfo.h */,
-				6F808E02168CB8A300CEDFF5 /* AppInfo.m */,
-				6F808E03168CB8A300CEDFF5 /* GetVersion.h */,
-				6F808E04168CB8A300CEDFF5 /* GetVersion.m */,
-				6F808E05168CB8A300CEDFF5 /* IsSupported.h */,
-				6F808E06168CB8A300CEDFF5 /* IsSupported.m */,
-				6F808E07168CB8A300CEDFF5 /* Tracker.h */,
-				6F808E08168CB8A300CEDFF5 /* Tracker.m */,
+				D2921AE317DF98C0004B1118 /* Anonymous.h */,
+				D2921AE417DF98C0004B1118 /* Anonymous.m */,
+				D2921AE517DF98C0004B1118 /* AppID.h */,
+				D2921AE617DF98C0004B1118 /* AppID.m */,
+				D2921AE717DF98C0004B1118 /* AppName.h */,
+				D2921AE817DF98C0004B1118 /* AppName.m */,
+				D2921AE917DF98C0004B1118 /* AppVersion.h */,
+				D2921AEA17DF98C0004B1118 /* AppVersion.m */,
+				D2921AEB17DF98C0004B1118 /* ClientID.h */,
+				D2921AEC17DF98C0004B1118 /* ClientID.m */,
+				D2921AED17DF98C0004B1118 /* CloseTracker.h */,
+				D2921AEE17DF98C0004B1118 /* CloseTracker.m */,
+				D2921AEF17DF98C0004B1118 /* CreateTracker.h */,
+				D2921AF017DF98C0004B1118 /* CreateTracker.m */,
+				D2921AF117DF98C0004B1118 /* CustomDimension.h */,
+				D2921AF217DF98C0004B1118 /* CustomDimension.m */,
+				D2921AF317DF98C0004B1118 /* CustomMetric.h */,
+				D2921AF417DF98C0004B1118 /* CustomMetric.m */,
+				D2921AF517DF98C0004B1118 /* DryRun.h */,
+				D2921AF617DF98C0004B1118 /* DryRun.m */,
+				D2921AF717DF98C0004B1118 /* GetVersion.h */,
+				D2921AF817DF98C0004B1118 /* GetVersion.m */,
+				D2921AF917DF98C0004B1118 /* IsSupported.h */,
+				D2921AFA17DF98C0004B1118 /* IsSupported.m */,
+				D2921AFB17DF98C0004B1118 /* LogLevel.h */,
+				D2921AFC17DF98C0004B1118 /* LogLevel.m */,
+				D2921AFD17DF98C0004B1118 /* OptOut.h */,
+				D2921AFE17DF98C0004B1118 /* OptOut.m */,
+				D2921AFF17DF98C0004B1118 /* SampleRate.h */,
+				D2921B0017DF98C0004B1118 /* SampleRate.m */,
+				D2921B0117DF98C0004B1118 /* Secure.h */,
+				D2921B0217DF98C0004B1118 /* Secure.m */,
+				D2921B0317DF98C0004B1118 /* SessionControl.h */,
+				D2921B0417DF98C0004B1118 /* SessionControl.m */,
+				D2921B0517DF98C0004B1118 /* TrackData.h */,
+				D2921B0617DF98C0004B1118 /* TrackData.m */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -154,6 +268,28 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		D2921B2B17DF98CB004B1118 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				D2921B3617DF9D73004B1118 /* Track.h */,
+				D2921B3717DF9D73004B1118 /* TrackAppView.h */,
+				D2921B3817DF9D73004B1118 /* TrackAppView.m */,
+				D2921B3917DF9D73004B1118 /* TrackEvent.h */,
+				D2921B3A17DF9D73004B1118 /* TrackEvent.m */,
+				D2921B3B17DF9D73004B1118 /* TrackException.h */,
+				D2921B3C17DF9D73004B1118 /* TrackException.m */,
+				D2921B3D17DF9D73004B1118 /* TrackProduct.h */,
+				D2921B3E17DF9D73004B1118 /* TrackProduct.m */,
+				D2921B3F17DF9D73004B1118 /* TrackSocial.h */,
+				D2921B4017DF9D73004B1118 /* TrackSocial.m */,
+				D2921B4117DF9D73004B1118 /* TrackTiming.h */,
+				D2921B4217DF9D73004B1118 /* TrackTiming.m */,
+				D2921B4317DF9D73004B1118 /* TrackTransaction.h */,
+				D2921B4417DF9D73004B1118 /* TrackTransaction.m */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -168,6 +304,32 @@
 				D2E12C5017DCC0D400064FA0 /* GAILogger.h in Headers */,
 				D2E12C5117DCC0D400064FA0 /* GAITrackedViewController.h in Headers */,
 				D2E12C5217DCC0D400064FA0 /* GAITracker.h in Headers */,
+				D2921B0717DF98C0004B1118 /* Anonymous.h in Headers */,
+				D2921B0917DF98C0004B1118 /* AppID.h in Headers */,
+				D2921B0B17DF98C0004B1118 /* AppName.h in Headers */,
+				D2921B0D17DF98C0004B1118 /* AppVersion.h in Headers */,
+				D2921B0F17DF98C0004B1118 /* ClientID.h in Headers */,
+				D2921B1117DF98C0004B1118 /* CloseTracker.h in Headers */,
+				D2921B1317DF98C0004B1118 /* CreateTracker.h in Headers */,
+				D2921B1517DF98C0004B1118 /* CustomDimension.h in Headers */,
+				D2921B1717DF98C0004B1118 /* CustomMetric.h in Headers */,
+				D2921B1917DF98C0004B1118 /* DryRun.h in Headers */,
+				D2921B1B17DF98C0004B1118 /* GetVersion.h in Headers */,
+				D2921B1D17DF98C0004B1118 /* IsSupported.h in Headers */,
+				D2921B1F17DF98C0004B1118 /* LogLevel.h in Headers */,
+				D2921B2117DF98C0004B1118 /* OptOut.h in Headers */,
+				D2921B2317DF98C0004B1118 /* SampleRate.h in Headers */,
+				D2921B2517DF98C0004B1118 /* Secure.h in Headers */,
+				D2921B2717DF98C0004B1118 /* SessionControl.h in Headers */,
+				D2921B2917DF98C0004B1118 /* TrackData.h in Headers */,
+				D2921B4517DF9D73004B1118 /* Track.h in Headers */,
+				D2921B4617DF9D73004B1118 /* TrackAppView.h in Headers */,
+				D2921B4817DF9D73004B1118 /* TrackEvent.h in Headers */,
+				D2921B4A17DF9D73004B1118 /* TrackException.h in Headers */,
+				D2921B4C17DF9D73004B1118 /* TrackProduct.h in Headers */,
+				D2921B4E17DF9D73004B1118 /* TrackSocial.h in Headers */,
+				D2921B5017DF9D73004B1118 /* TrackTiming.h in Headers */,
+				D2921B5217DF9D73004B1118 /* TrackTransaction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +386,31 @@
 				6F808E18168CBA4300CEDFF5 /* FREConversionUtil.m in Sources */,
 				6F808E19168CBA4300CEDFF5 /* FREUtils.m in Sources */,
 				6F808E1A168CBA4300CEDFF5 /* GAExtension.m in Sources */,
-				6F808E0F168CBA3400CEDFF5 /* Analytics.m in Sources */,
-				6F808E11168CBA3400CEDFF5 /* AppInfo.m in Sources */,
-				6F808E13168CBA3400CEDFF5 /* GetVersion.m in Sources */,
-				6F808E15168CBA3400CEDFF5 /* IsSupported.m in Sources */,
-				6F808E17168CBA3400CEDFF5 /* Tracker.m in Sources */,
+				D2921B0817DF98C0004B1118 /* Anonymous.m in Sources */,
+				D2921B0A17DF98C0004B1118 /* AppID.m in Sources */,
+				D2921B0C17DF98C0004B1118 /* AppName.m in Sources */,
+				D2921B0E17DF98C0004B1118 /* AppVersion.m in Sources */,
+				D2921B1017DF98C0004B1118 /* ClientID.m in Sources */,
+				D2921B1217DF98C0004B1118 /* CloseTracker.m in Sources */,
+				D2921B1417DF98C0004B1118 /* CreateTracker.m in Sources */,
+				D2921B1617DF98C0004B1118 /* CustomDimension.m in Sources */,
+				D2921B1817DF98C0004B1118 /* CustomMetric.m in Sources */,
+				D2921B1A17DF98C0004B1118 /* DryRun.m in Sources */,
+				D2921B1C17DF98C0004B1118 /* GetVersion.m in Sources */,
+				D2921B1E17DF98C0004B1118 /* IsSupported.m in Sources */,
+				D2921B2017DF98C0004B1118 /* LogLevel.m in Sources */,
+				D2921B2217DF98C0004B1118 /* OptOut.m in Sources */,
+				D2921B2417DF98C0004B1118 /* SampleRate.m in Sources */,
+				D2921B2617DF98C0004B1118 /* Secure.m in Sources */,
+				D2921B2817DF98C0004B1118 /* SessionControl.m in Sources */,
+				D2921B2A17DF98C0004B1118 /* TrackData.m in Sources */,
+				D2921B4717DF9D73004B1118 /* TrackAppView.m in Sources */,
+				D2921B4917DF9D73004B1118 /* TrackEvent.m in Sources */,
+				D2921B4B17DF9D73004B1118 /* TrackException.m in Sources */,
+				D2921B4D17DF9D73004B1118 /* TrackProduct.m in Sources */,
+				D2921B4F17DF9D73004B1118 /* TrackSocial.m in Sources */,
+				D2921B5117DF9D73004B1118 /* TrackTiming.m in Sources */,
+				D2921B5317DF9D73004B1118 /* TrackTransaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

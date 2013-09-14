@@ -20,6 +20,7 @@ import flash.utils.getQualifiedClassName;
 
 import mx.logging.ILogger;
 import mx.logging.Log;
+import mx.logging.LogEventLevel;
 
 public final class Analytics implements IAnalytics {
 
@@ -158,11 +159,11 @@ public final class Analytics implements IAnalytics {
 
 	logStatusLevel function processStatusEvent(level:String, code:String):void {
 		switch (level.toUpperCase()) {
+			case "VERBOSE":
+				logger.debug(code);
+				break;
 			case "INFO":
 				logger.info(code);
-				break;
-			case "DEBUG":
-				logger.debug(code);
 				break;
 			case "WARN":
 				logger.warn(code);
@@ -170,11 +171,8 @@ public final class Analytics implements IAnalytics {
 			case "ERROR":
 				logger.error(code);
 				break;
-			case "FATAL":
-				logger.fatal(code);
-				break;
 			default:
-				logger.debug("AsyncStatusEvent level (" + level + ") unknown.");
+				logger.info("AsyncStatusEvent level (" + level + ") unknown.");
 				break;
 		}
 	}

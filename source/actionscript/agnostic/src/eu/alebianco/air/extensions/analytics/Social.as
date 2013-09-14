@@ -16,7 +16,7 @@ internal class Social implements Hit {
 
 	private var _network:String;
 	private var _action:String;
-	private var _content:String;
+	private var _target:String;
 
     public function get type():HitType {
         return HitType.SOCIAL;
@@ -25,7 +25,7 @@ internal class Social implements Hit {
     public function Social(builder:SocialBuilder) {
 		_network = builder.network;
 		_action = builder.action;
-		_content = builder.content;
+		_target = builder.target;
 	}
 
 	public function get network():String {
@@ -34,8 +34,8 @@ internal class Social implements Hit {
 	public function get action():String {
 		return _action;
 	}
-	public function get content():String {
-		return _content;
+	public function get target():String {
+		return _target;
 	}
 }
 }

@@ -26,7 +26,7 @@ public interface ITracker extends IDisposable {
 	function set appVersion(value:String):void;
 
 	function get clientID():String;
-	function set clientID(value:String);
+	function set clientID(value:String):void;
 
 	function get secure():Boolean;
 	function set secure(value:Boolean):void;
@@ -49,7 +49,7 @@ public interface ITracker extends IDisposable {
 	function buildException(fatal:Boolean):IExceptionBuilder;
 	function buildTiming(category:String, interval:uint):ITimingBuilder;
 	function buildSocial(network:String, action:String):ISocialBuilder;
-	function buildTransaction(id:String, cost:Number):ITransactionBuilder;
+	function buildTransaction(id:String, affiliation:String, revenue:Number, tax:Number, shipping:Number):ITransactionBuilder;
 
     function send(hit:Hit):void;
 }

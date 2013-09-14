@@ -11,6 +11,6 @@
 package eu.alebianco.air.extensions.analytics.api {
 
 public interface ISocialBuilder extends IHitBuilder {
-	function forContent(content:String):ISocialBuilder;
+	function forTarget(content:String):ISocialBuilder;
 }
 }

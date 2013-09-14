@@ -11,7 +11,8 @@
 package eu.alebianco.air.extensions.analytics.api {
 
 public interface IProductBuilder {
-	function inCategory(category:String):IProductBuilder
+	function inCategory(category:String):IProductBuilder;
+    function forCurrency(code:String):IProductBuilder;
 	function create():IProduct;
 	function add():ITransactionBuilder;
 }

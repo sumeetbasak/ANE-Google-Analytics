@@ -15,24 +15,14 @@ package eu.alebianco.air.extensions.analytics.api {
  * <p>It exposes methods to setup the optional parameters for a transaction and add products to it.</p>
  */
 public interface ITransactionBuilder extends IHitBuilder {
-	/**
-	 * Sets the affiliation parameter for the Transaction this Builder will build.
-	 * @param affiliation the new value for affiliation
-	 * @return itself
-	 */
-	function withAffiliation(affiliation:String):ITransactionBuilder;
-	/**
-	 * Sets the shipping cost for the Transaction this Builder will build.
-	 * @param cost thew new tax shipping value, expressed in your currency (will be translated in microns automatically).
-	 * @return
-	 */
-	function withShippingCost(cost:Number):ITransactionBuilder;
-	/**
-	 * Sets the total tax for the Transaction this Builder will build.
-	 * @param cost thew new tax cost value, expressed in your currency (will be translated in microns automatically).
-	 * @return
-	 */
-	function withTaxCost(cost:Number):ITransactionBuilder;
+
+    /**
+     * Sets the product's price currency.
+     * @see https://developers.google.com/analytics/devguides/platform/features/currencies
+     * @param code  the currency code. Must be one of the supported value.
+     * @return itself
+     */
+    function forCurrency(code:String):IProductBuilder;
 	/**
 	 * Create a new Product builder.
 	 * <p>The builder returned can be used to setup the optional parameters of the product and then add it to the

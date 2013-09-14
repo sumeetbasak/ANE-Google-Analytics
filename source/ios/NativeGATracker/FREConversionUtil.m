@@ -23,13 +23,13 @@
 
         switch (result) {
             case FRE_INVALID_ARGUMENT:
-                exception = [NSException exceptionWithName:@"InvalidArgument" reason:@"TThe object or value parameter is NULL." userInfo:nil];
+                exception = [NSException exceptionWithName:@"InvalidArgument" reason:@"TThe object or value parameter is NULL." userInfo:NULL];
                 break;
             case FRE_WRONG_THREAD:
-                exception = [NSException exceptionWithName:@"WrongThread" reason:@"The method was called from a thread other than the one on which the runtime has an outstanding call to a native extension function." userInfo:nil];
+                exception = [NSException exceptionWithName:@"WrongThread" reason:@"The method was called from a thread other than the one on which the runtime has an outstanding call to a native extension function." userInfo:NULL];
                 break;
             default:
-                exception = nil;
+                exception = NULL;
                 break;
         }
 

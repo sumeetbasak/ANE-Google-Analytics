@@ -17,9 +17,9 @@ package eu.alebianco.air.extensions.analytics.api {
 public interface ISocialBuilder extends IHitBuilder {
 	/**
 	 * Sets the content for the Social interaction this Builder will build.
-	 * @param content represents the content on which the social action is being taken (i.e. a specific article or video).
+	 * @param target represents the content on which the social action is being taken (i.e. a specific article or video).
 	 * @return itself
 	 */
-	function forContent(content:String):ISocialBuilder;
+	function forTarget(target:String):ISocialBuilder;
 }
 }

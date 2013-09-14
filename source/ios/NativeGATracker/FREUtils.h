@@ -21,10 +21,8 @@
 enum LogLevel {
     kVerbose = 0,
     kInfo,
-    kDebug,
     kWarning,
     kError,
-    kFatal
 };
 
 void logEvent(FREContext ctx, enum LogLevel lvl, NSString *format, ...);

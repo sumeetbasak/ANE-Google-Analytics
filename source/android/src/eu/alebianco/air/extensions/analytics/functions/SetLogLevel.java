@@ -29,7 +29,7 @@ public class SetLogLevel implements FREFunction {
         try {
             value = args[0].getAsString();
         } catch (Exception e) {
-            FREUtils.logEvent(context, LogLevel.FATAL,
+            FREUtils.logEvent(context, LogLevel.ERROR,
                     "Unable to read the 'value' parameter. [Exception:(type:%s, method:%s)].",
                     FREUtils.stripPackageFromClassName(e.toString()), FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'value' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
@@ -43,18 +43,14 @@ public class SetLogLevel implements FREFunction {
             case INFO:
                 level = Logger.LogLevel.INFO;
                 break;
-            case DEBUG:
-                level = Logger.LogLevel.INFO;
-                break;
             case WARNING:
                 level = Logger.LogLevel.WARNING;
                 break;
             case ERROR:
                 level = Logger.LogLevel.ERROR;
                 break;
-            case FATAL:
-                level = Logger.LogLevel.ERROR;
-                break;
+            default:
+                level = Logger.LogLevel.INFO;
         }
 
         try {

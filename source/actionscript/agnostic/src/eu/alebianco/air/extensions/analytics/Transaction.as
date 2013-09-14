@@ -17,11 +17,12 @@ internal class Transaction implements Hit {
 	private static const ID_VALIDATOR:RegExp = /.+/i;
 
 	private var _id:String;
-	private var _cost:Number;
+	private var _revenue:Number;
 	private var _affiliation:String;
-	private var _shipping:Object;
-	private var _tax:Object;
-	private var _products:Array;
+	private var _shipping:Number;
+	private var _tax:Number;
+    private var _currency:String;
+    private var _products:Array;
 
     public function get type():HitType {
         return HitType.TRANSACTION;
@@ -33,27 +34,31 @@ internal class Transaction implements Hit {
 			throw new ArgumentError("Transaction ID is invalid: must be not null or a empty string.");
 
 		_id = builder.id;
-		_cost = builder.cost;
+		_revenue = builder.revenue;
 		_affiliation = builder.affiliation;
 		_shipping = builder.shipping;
 		_tax = builder.tax;
 		_products = builder.products;
+		_currency = builder.currency;
 	}
 
 	public function get id():String {
 		return _id;
 	}
-	public function get cost():Number {
-		return _cost;
+	public function get revenue():Number {
+		return _revenue;
 	}
 	public function get affiliation():String {
 		return _affiliation;
 	}
 	public function get shipping():Number {
-		return Number(_shipping);
+		return _shipping;
 	}
 	public function get tax():Number {
-		return Number(_tax);
+		return _tax;
+	}
+	public function get currency():String {
+		return _currency;
 	}
 	public function get products():Array {
 		return _products;

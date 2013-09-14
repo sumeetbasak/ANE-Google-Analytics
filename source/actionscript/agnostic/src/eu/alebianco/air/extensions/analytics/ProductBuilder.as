@@ -18,15 +18,18 @@ internal class ProductBuilder implements IProductBuilder {
 
 	private var transaction:TransactionBuilder;
 
+    internal var id:String;
 	internal var sku:String;
 	internal var name:String;
 	internal var price:Number;
 	internal var quantity:uint;
 	internal var category:String = null;
+    internal var currency:String = null;
 
-	public function ProductBuilder(transaction:TransactionBuilder, sku:String, name:String, price:Number, quantity:uint) {
+	public function ProductBuilder(transaction:TransactionBuilder, id:String, sku:String, name:String, price:Number, quantity:uint) {
 		this.transaction = transaction;
 
+        this.id = id;
 		this.sku = sku;
 		this.name = name;
 		this.price = price;
@@ -37,6 +40,14 @@ internal class ProductBuilder implements IProductBuilder {
 		this.category = category;
 		return this;
 	}
+
+    public function forCurrency(code:String):IProductBuilder {
+        if (TransactionBuilder.VALID_CURRENCIES.split(",").indexOf(code) == -1) {
+            throw new ArgumentError("Specified currency is not valid.");
+        }
+        this.currency = code;
+        return this;
+    }
 
 	public function create():IProduct {
 		return new Product(this);
